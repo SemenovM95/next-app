@@ -6,10 +6,7 @@
     padding-right: 16px;
     margin: 0;
   }
-  &__sort {
-    display: flex;
-  }
-  &__searchParam {
+  &__sort, &__searchParam {
     display: flex;
   }
 }
