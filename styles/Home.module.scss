@@ -13,22 +13,6 @@
   padding: 4rem 0;
 }
 
-.controls {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  & p {
-    padding-right: 16px;
-    margin: 0;
-  }
-  &__sort {
-    display: flex;
-  }
-  &__searchParam {
-    display: flex;
-  }
-}
-
 .posts {
   width: 100%;
   display: flex;

@@ -1,6 +1,7 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import Post from "../components/blocks/post"
+import Post from '../components/blocks/post'
+import ListControls from '../components/blocks/listControls'
 import styles from '../styles/Home.module.scss'
 import React, {
   ChangeEvent,
@@ -43,30 +44,14 @@ const Home: NextPage = (props: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        
-        <div className={styles.controls}>
-          <div className={styles.controls__sort}>
-            <p>Sort by:</p>
-            <select name="Sort" id="Sort" onChange={setSort}>
-              <option value="ASC">A-Z</option>
-              <option value="DESC">Z-A</option>
-            </select>
-          </div>
-          <div className={styles.controls__searchParam}>
-            <p>Search by:</p>
-            <select name="Sort" id="Sort" onChange={setField}>
-              <option value="description">Description</option>
-              <option value="title">Title</option>
-            </select>
-          </div>
-          <input
-            type="text"
-            placeholder="Search here"
-            name="postSearch"
-            value={userSearchQuery}
-            onInput={setSearch}
-          />
-        </div>
+
+        <ListControls
+          setSort={setSort}
+          setField={setField}
+          setSearch={setSearch}
+          searchValue={userSearchQuery}
+        />
+
         {filteredPosts.length ?
           (<ul className={styles.posts}>
             {filteredPosts.map((post: IPost) => {
