@@ -1,16 +1,16 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import Post from '../components/blocks/post'
-import ListControls from '../components/blocks/listControls'
-import styles from '../styles/Home.module.scss'
+import Post from 'components/blocks/post'
+import ListControls from 'components/blocks/listControls'
+import styles from 'styles/Home.module.scss'
 import React, {
   ChangeEvent,
   FormEvent,
   SetStateAction,
   useState
 } from "react"
-import {useFilter} from "../lib/hooks/useFilter";
-import {IPost} from "../lib/types/IPost"
+import {useFilter} from "lib/hooks/useFilter";
+import {IPost} from "lib/types/IPost"
 
 const apiUrl = 'http://localhost:3000'
 

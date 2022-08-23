@@ -1,4 +1,4 @@
-import styles from "./listControls.module.scss";
+import styles from "components/blocks/listControls.module.scss";
 import React from "react";
 
 export default function listControls (props: any) {

@@ -1,5 +1,5 @@
-import {IPost} from "../../lib/types/IPost";
-import styles from './post.module.scss';
+import {IPost} from "lib/types/IPost";
+import styles from 'components/blocks/post.module.scss';
 
 export default function Post(props: any) {
     const post: IPost =  props.post;

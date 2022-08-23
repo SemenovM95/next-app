@@ -1,5 +1,5 @@
 import {useMemo, useRef} from "react";
-import {IFilterOptions} from "../types/IFilterOptoins";
+import {IFilterOptions} from "lib/types/IFilterOptoins";
 
 interface IFilterObject {
   id: number
