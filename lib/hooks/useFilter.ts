@@ -11,10 +11,9 @@ export function useFilter<T extends IFilterObject>(items: Array<T>, options: IFi
 
   useMemo(() => {
     if (!filter.value) return result.current = items;
-    result.current = items.filter((el: T) => (el[filter.name as keyof T] as unknown as string).split(' ')
-      .join('')
+    result.current = items.filter((el: T) => (el[filter.name as keyof T] as unknown as string).replaceAll(' ', '')
       .toLowerCase()
-      .includes(filter.value.toLowerCase())
+      .includes(filter.value.replaceAll(' ', '').toLowerCase())
     )
   }, [items, filter.value, filter.name])
 
